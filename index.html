@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Elite Media Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   
+</head>
+
+<body style="background-image: url('assets/images/cellphones.jpg')" class="background">
+    <div class="container-fluid">
+            <div class="col-md-12 pt-2 pb-2 text-left">         
+                <nav>
+                    <a href="index.html"class="text-decoration-none text-white">Home</a>
+                    <a href="clients.html"class="text-decoration-none text-white">Clients</a>
+                    <a href="contact.html"class="text-decoration-none text-white">Contact</a>
+                </nav>
+            </div>
+        <div class="row">
+            <div class="col-md-12 pt-3 pb-2 text-right text-white">
+                80 S 8th St, Suite #005 Minneapolis, MN 55402
+                <p>(763) 123-1234</p>
+                <p>info@elitemediadesign.com</p>
+            </div> 
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12 pt-2 pb-2 text-center" id="compName">
+                <img src="assets/images/image2vector.svg" alt="Ipad">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mt-12 pl-4 pt-3 pb-3" id="heading">
+                Mission Statement
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6" id="statement">
+                <div class="col-md-12 pt-3 pr-3 pb-3 text-white justify-content-center">
+                <p>We strive to deliver value in our service, and to understand with respect all of our client needss and to provide a partnership that is created when we host our clients web services, develop their site, market their product/service or simply give them advice.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mt-12pl-4 pt-3 pb-3" id="heading">
+                Vision
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-5" id="statement">
+                <div class="col-md-12 pt-3 pr-3 pb-3 text-white">
+                <p>Our vision is to create a business world full of prosperity, meaning, and connection for all.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mt-12 pl-4 pt-3 pb-3" id="heading">
+                Services
+            </div>
+        </div>
+        <div class="row justify-content-center pb-4" id="services">
+            <div class="col-md-3 pt-3 pr-3 pb-3"></div>
+            <div class="col-md-3 pt-2 pr-2 pb-2 text-white" id="services">
+                <p>SEO</p>
+                <p>Website</p>
+                <p>Ecommerce</p>
+                <p>Graphic Design</p>
+            </div>
+            <div class="col-md-3 pt-2 pr-2 pb-2 text-white" id="services">
+                <p>Email Marketing</p>
+                <p>Photography</p>
+                <p>Videography</p>
+            </div>
+            <div class="col-md-3 pt-3 pr-3 pb-3"></div>
+            <div class="row justify-content-center">
+                <div id = "insta-show"></div>
+                </div>
+            </div>
+            <div class="row">
+            <div class = 'col-md-12'></div>
+            <div id = "insta-show"></div>
+            </div>
+        </div>
+        </div>
+        <div class="fixed-bottom text-center pt-1 pb-1" id="footer">
+            Copyright &#169
+        </div>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+      // Instagram API
+      var queryURL = "https://api.instagram.com/oembed?url=https://www.instagram.com/p/B_3TgfZAKbF";
+  
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function(response) {
+        var instaDiv = $("<div>");                  //adding a new div
+        var imageDiv = $("<div>");                  //adding a new div for the instagram picture
+        imageDiv.addClass("col-md-12 instapic");
+        var topicImage = $("<img>");
+        topicImage.attr("src", response.thumbnail_url);
+        var ptag = $("<div>").text(response.title);
+        ptag.addClass("col-md-12 instapost");
+        instaDiv.append(imageDiv);                  //adding pictures and post to the instaDiv variable so it can be displayed 
+        instaDiv.append(topicImage);
+        instaDiv.append(ptag);
+        $('#insta-show').append(instaDiv);
+        console.log(response);
+      });
+    </script>
+    </div>
+</body>
+</html>

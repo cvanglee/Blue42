@@ -1,0 +1,84 @@
+    .background {
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        height: 100%;
+    }
+    #yourName {
+        background-color: #002f6c;
+        color: #F0AD4E;
+    }
+    nav{
+        background-color: #002f6c;
+        color: #F0AD4E;
+    }
+    nav a:hover {
+        color: #F0AD4E;
+    }
+    #compName{
+    font-size: 45px;
+    font-weight: bolder;
+    color: #002f6c;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    }
+    #heading {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #F0AD4E;
+    font-family: 'Montserrat';
+    }
+    #heading2 {
+        font-size: 30px;
+        font-weight: bolder;
+        color: #002f6c;
+        font-family: 'Montserrat';
+        }
+    a img{
+        width: 249px;
+        height: 188px;    
+        }
+    #footer {
+    border-top-color:#002f6c;
+    border-top-style: solid;
+    border-top-width: 5px;
+    padding-top: 25px;
+    margin-top: 20px;
+    font-size: 10px;
+    background-color: #F0AD4E;
+    }
+    input[type=submit] {
+        background-color: #002f6c;
+        border: none;
+        color: white;
+      }
+    #compName img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        height: auto;
+    }
+    #statement{
+        background: rgba(0, 0, 0, 0); /* Black background with 0.5 opacity */
+        font-family: 'Montserrat';
+        text-align: center;
+    }
+    #services{
+        font-weight: bolder;
+        font-family: 'Montserrat';
+        text-align: center;
+    }
+    .instapic img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 249px;
+        height: auto;
+    }
+    .instapost{
+        background-color: white;
+        text-align: center;
+
+    }
+   
